@@ -58,7 +58,7 @@
             <artifactId>springfox-swagger2</artifactId>
             <version>2.7.0</version>
         </dependency>
-    </dependencies>
+    
     <dependency>
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
@@ -87,6 +87,7 @@
         <artifactId>spotbugs-maven-plugin</artifactId>
         <version>4.1.4</version>
     </dependency>
+    </dependencies>
 
     <build>
         <plugins>
