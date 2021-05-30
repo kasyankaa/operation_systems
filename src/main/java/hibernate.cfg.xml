@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/third_lab</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <mapping class="com.iot.domain.AutomatData"/>
+        <mapping class="com.iot.domain.Country"/>
+        <mapping class="com.iot.domain.Delivery"/>
+        <mapping class="com.iot.domain.Factory"/>
+        <mapping class="com.iot.domain.GpsTracker"/>
+        <mapping class="com.iot.domain.Region"/>
+        <mapping class="com.iot.domain.Snack"/>
+        <mapping class="com.iot.domain.SnackAutomat"/>
+        <mapping class="com.iot.domain.UpdatingAutomatWithCoins"/>
+        <mapping class="com.iot.domain.UpdatingAutomatWithSnacks"/>
+        <mapping class="com.iot.domain.WithdrawingMoneyFromAutomat"/>
+        <mapping class="com.iot.domain.Worker"/>
+        <mapping class="com.iot.domain.WorkerDelivers"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
