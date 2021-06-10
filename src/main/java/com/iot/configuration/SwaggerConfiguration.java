@@ -6,6 +6,8 @@ import org.springframework.hateoas.client.LinkDiscoverer;
 import org.springframework.hateoas.client.LinkDiscoverers;
 import org.springframework.hateoas.mediatype.collectionjson.CollectionJsonLinkDiscoverer;
 import org.springframework.plugin.core.SimplePluginRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -18,11 +20,12 @@ import java.util.List;
 @EnableSwagger2
 @Configuration
 
-public class Swagger implements WebMvcConfigurer {
+public class SwaggerConfiguration implements WebMvcConfigurer {
     private static final String SWAGGER_API_VERSION = "1.0";
     private static final String LICENSE_TEXT = "License";
     private static final String title = "Spring Boot ";
     private static final String description = "api!";
+
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
@@ -62,5 +65,4 @@ public class Swagger implements WebMvcConfigurer {
         return new LinkDiscoverers(SimplePluginRegistry.create(plugins));
 
     }
-
 }
